@@ -1,18 +1,20 @@
-def éprimo(k):
-    fator = 2
-    while (k % fator != 0) and (fator <= k / 2):
-        fator = fator + 1
-    if k % fator == 0:
+def ehPrimo(k):
+    divisores = 0
+    for divisor in range(1, k):
+        if k % divisor == 0:
+            divisores = divisores + 1
+        if divisores > 1:
+          break
+    if divisores > 1:
         return False
     else:
         return True
 
-primo = 2
-n = int(input('Digite um número: '))
-i = 2
-while i <= n:
-    if éprimo(i):
-       primo = i
-    i = i + 1
-    
-print(primo)
+def maior_primo(x):
+    primo = x
+    i = 0
+    while i <= x:
+        if ehPrimo(i):
+            primo = i
+        i = i + 1
+    return primo
