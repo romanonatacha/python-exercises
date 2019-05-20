@@ -18,8 +18,8 @@ def  imprime_raizes(a, b, c):
         if d < 0:
         print('esta equação não possui raízes reais')
         else:
-            raiz1 = (-b + math.sqrt(delta)) / (2 * a)
-            raiz2 = (-b - math.sqrt(delta)) / (2 * a)
+            raiz1 = (-b + math.sqrt(d)) / (2 * a)
+            raiz2 = (-b - math.sqrt(d)) / (2 * a)
             print('as raízes da equação são', raiz2, 'e', raiz1)
 
 
